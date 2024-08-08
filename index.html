@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/96c75676d8.js" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyX95Pp5Kdh_u6Gv_BSRYuu4jSt3dZjJo&libraries=places"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Drop It</span>
+
+        </div>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <select>
+                    <option>All Categories</option>
+                    <option>Vegetables</option>
+                    <option>Fruits</option>
+                    <option>Dairy</option>
+                </select>
+                <input type="text" placeholder="Search for products...">
+            </div>
+            <div class="search-icon">
+                <img src="Search-btn.png" alt="Search">
+            </div>
+        </div>
+
+
+        <div class="icons">
+            <img src="Cart-1.png" alt="Cart">
+            <div class="profile-icon">
+                <img src="Profile.png" alt="Profile">
+            </div>
+        </div>
+    </div>
+    <div class="background">
+        <div class="breadcrumbs">Home / All Categories</div>
+        <div class="title"> All Categories</div>
+    </div>
+    <div class="container1">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="dashboard.png" alt=""> &nbsp;&nbsp;&nbsp;Dashboard</a></li>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="person - Copy.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Info</a></li>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="pay - Copy.png" alt="">&nbsp;&nbsp;&nbsp;Payment Method</a></li>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="orders-dashboard.png" alt="">&nbsp;&nbsp;&nbsp;Order</a></li>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="wishlist - Copy.png" alt="">&nbsp;&nbsp;&nbsp;Wishlist</a></li>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="address.png" alt="">&nbsp;&nbsp;&nbsp;Address</a></li>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="password.png" alt="">&nbsp;&nbsp;&nbsp;Change Password</a></li>
+                <li><a href="#">&nbsp;&nbsp;&nbsp;<img src="log-in.png" alt="">&nbsp;&nbsp;&nbsp;Logout</a></li>
+            </ul>
+        </div>
+        <div class="container">
+       
+            <table class="cart-table" style="border:  1px solid #ddd; min-height: 50%;" >
+                <thead>
+                    <tr style="border:  1px solid #ddd;height: 30px;">
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <!-- <th>Total</th>
+                        <th>Action</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  >
+                        <td><img src="product1.png" alt="Tomato Local" class="product-img"><span>Tomato Local</span></td>
+                        <td>&#8377; 64</td>
+                        <td class="incrase-decrease">
+                            
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <input type="text" value="0" class="quantity-input" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </td>
+                        <!-- <td class="total-price">&#8377; 64</td>
+                        <td><button class="remove-btn" onclick="removeItem(this)">X</button></td> -->
+                    </tr>
+                    <tr >
+                        <td><img src="product1.png" alt="Tomato Local" class="product-img"><span>Tomato Local</span></td>
+                        <td>&#8377; 64</td>
+                        <td class="incrase-decrease">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <input type="text" value="0" class="quantity-input" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </td>
+                        <!-- <td class="total-price">&#8377; 64</td>
+                        <td><button class="remove-btn" onclick="removeItem(this)">X</button></td> -->
+                    </tr>
+                    <tr >
+                        <td><img src="product1.png" alt="Tomato Local" class="product-img"><span>Tomato Local</span></td>
+                        <td>&#8377; 64</td>
+                        <td class="incrase-decrease">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <input type="text" value="0" class="quantity-input" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </td>
+                        <!-- <td class="total-price">&#8377; 64</td>
+                        <td><button class="remove-btn" onclick="removeItem(this)">X</button></td> -->
+                    </tr>
+                    <tr >
+                        <td><img src="product1.png" alt="Tomato Local" class="product-img"><span>Tomato Local</span></td>
+                        <td>&#8377; 64</td>
+                        <td class="incrase-decrease">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <input type="text" value="0" class="quantity-input" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </td>
+                        <!-- <td class="total-price">&#8377; 64</td>
+                        <td><button class="remove-btn" onclick="removeItem(this)">X</button></td> -->
+                    </tr>
+                    <tr >
+                        <td><img src="product1.png" alt="Tomato Local" class="product-img"><span>Tomato Local</span></td>
+                        <td>&#8377; 64</td>
+                        <td class="incrase-decrease">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <input type="text" value="0" class="quantity-input" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </td>
+                        <!-- <td class="total-price">&#8377; 64</td>
+                        <td><button class="remove-btn" onclick="removeItem(this)">X</button></td> -->
+                    </tr>
+                    
+
+                    <!-- Repeat rows as necessary -->
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    <div class="subscription">
+        <h2><strong> subscribe to our Newsletter</strong></h2>
+        <form action="#" method="post">
+          <input type="email" name="email" placeholder="Your Email Address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    <div class="feature-containerhp">
+        <div class="featurehp">
+            <img src="bestdeals.png" alt="Deals">
+            <div>
+                <h3>Best Prices & Deals</h3>
+                <p>Don't miss our daily amazing deals and prices</p>
+            </div>
+        </div>
+        <div class="featurehp">
+            <img src="refundable.png" alt="Refund">
+            <div>
+                <h3>Refundable</h3>
+                <p>If your items have damage we agree to refund it</p>
+            </div>
+        </div>
+        <div class="featurehp">
+            <img src="delivery.png" alt="Free Delivery">
+            <div>
+                <h3>Free Delivery</h3>
+                <p>Do purchase over ₹50 and get free delivery anywhere</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-top">
+            <div class="contact-info">
+           <div>
+                   <div style="display: flex; align-items: center;">
+                       <img src="logo.png" alt="Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                       <h4 style="margin: 0;">Drop It</h4>
+                   </div>
+                   <ul style="list-style-type: none; padding: 0;">
+                       <li>
+                           <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>
+                           <a href="#">Address</a>
+                       </li>
+                       <li>
+                           <i class="fas fa-phone" style="margin-right: 10px;"></i>
+                           <a href="#">Call us</a>
+                       </li>
+                       <li>
+                           <i class="fas fa-envelope" style="margin-right: 10px;"></i>
+                           <a href="#">Email</a>
+                       </li>
+                       <li>
+                           <i class="fas fa-clock" style="margin-right: 10px;"></i>
+                           <a href="#">Work Hours</a>
+                       </li>
+                   </ul>
+   
+               </ul>
+           </div>
+           </div>
+           <div>
+               <h4>Account</h4>
+               <ul>
+                   <li><a href="#">Wishlist</a></li>
+                   <li><a href="#">Cart</a></li>
+                   <li><a href="#">Track Orders</a></li>
+                   <li><a href="#">Shipping & Delivery</a></li>
+               </ul>
+           </div>
+           <div>
+               <h4>Useful Links</h4>
+               <ul>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact</a></li>
+                   <li><a href="#">Hot Deals</a></li>
+                   <li><a href="#">Promotions</a></li>
+               </ul>
+           </div>
+           <div>
+               <h4>Help Centtre</h4>
+               <ul>
+                   <li><a href="#">Payments</a></li>
+                   <li><a href="#">Refund</a></li>
+                   <li><a href="#">Checkout</a></li>
+                   <li><a href="#">Q&A</a></li>
+                   <li><a href="#">Privacy Policy</a></li>                
+               </ul>
+           </div>
+       </div>
+        <div class="footer-bottom">
+            <div style="display: flex; align-items: center;">
+                <p style="color: black;">&copy; 2024 Grocery Mart. All rights reserved. | <a href="#">Privacy Policy</a></p>
+
+            </div>
+            <div class="social-links1">
+                <a href="#" class="twittericon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="twittericon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="twittericon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="twittericon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
